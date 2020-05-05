@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+    <meta name='yandex-verification' content='50d52c682c2823bb' />
+    <title>Расчет инженерных систем</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&display=swap&subset=cyrillic"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.min.css?v=16042020">
+
+    <meta name="yandex-verification" content="dbcdde33149f8826" />
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(57096418, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/57096418" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
+</head>
+
+<body>
+    <header class='header'>
+        <nav class='navigation'>
+            <a href="" class="navigation__logo">
+                <img class='navigation__logo-image' src="/img/logo.png" alt="" width="50px">
+            </a>
+            <!-- <button type='button' class='navigation__toggle navigation__toggle-hidden'>Открыть меню</button> -->
+            <ul class='navigation__menu menu-list'>
+                <li class='menu-list__item'><a href='/index.html'>Главная</a></li>
+
+            </ul>
+
+        </nav>
+    </header>
+    <div id='blink7'>Для корректной работы всех функций <span class='alarm'>необходимо</span> использовать браузер <br><a class='banner' href="https://www.google.com/intl/ru/chrome/">Google Chrome</a></div>
+    <main class='main'>
+        <div style='margin: 20px 0 20px 100px;'>
+            <label for="ice-cream-choice"><span
+                    style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:115%;mso-bidi-font-family:Arial;mso-ansi-language:RU'><b>ВВЕДИТЕ
+                        ГОРОД:</b></span></label>
+            <input type='text' list="dailylayer" id="myBrowser" name="myBrowser" /></div>
+        <section class='calcpump'>
+            <p class=MsoBodyTextIndent3 style='text-align:center;text-indent:0cm'><b
+                    style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:115%;mso-bidi-font-family:
+                    Arial;mso-ansi-language:RU'>РАСЧЕТ СУТОЧНОГО СЛОЯ ОСАДКОВ </span></b><b
+                    style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:12.0pt;
+                    mso-bidi-font-size:11.0pt;line-height:115%;mso-bidi-font-family:Arial;
+                    mso-ansi-language:EN-US'>H</span></b><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:115%;mso-bidi-font-family:
+                    Arial;mso-ansi-language:RU'>р РАЗЛИЧНОЙ ОБЕСПЕЧЕННОСТИ<o:p></o:p></span></b></p>
+
+            <p class=MsoBodyTextIndent3 style='text-align:center;text-indent:0cm'><b
+                    style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:115%;mso-bidi-font-family:
+                    Arial;mso-ansi-language:RU'>(ВЕРОЯТНОСТИ ПРЕВЫШЕНИЯ) ДЛЯ Г.<span style='text-transform:uppercase;'
+                            class='innCity'></span>.<o:p></o:p></span></b></p>
+
+            <p class=MsoBodyTextIndent3 style='text-align:left;text-indent:0cm'><b
+                    style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:115%;mso-bidi-font-family:
+                    Arial;mso-ansi-language:RU'>ОБЪЕКТ:</span></p>
+
+
+
+            <datalist id="dailylayer">
+                <option value="Барнаул">
+                <option value="Бийск">
+                <option value="Горно-Алтайск">
+                <option value="Улаган">
+                <option value="Чемал">
+                <option value="Благовещенск">
+                <option value="Архангельск">
+                <option value="Холмогоры">
+                <option value="Астрахань">
+                <option value="Бирск">
+                <option value="Уфа">
+                <option value="Белгород">
+                <option value="Новый Оскол">
+                <option value="Брянск">
+                <option value="Улан-Удэ">
+                <option value="Баргузин">
+                <option value="Владимир">
+                <option value="Гусь-Хрустальный">
+                <option value="Ковров">
+                <option value="Муром">
+                <option value="Петушки">
+                <option value="Суздаль">
+                <option value="Волгоград">
+                <option value="Великий Устюг">
+                <option value="Вологда">
+                <option value="Тотьма">
+                <option value="Череповец">
+                <option value="Кириллов">
+                <option value="Каргополь">
+                <option value="Воронеж">
+                <option value="Калач">
+                <option value="Лиски">
+                <option value="Острогожск">
+                <option value="Павловск">
+                <option value="Россошь">
+                <option value="Могоча">
+                <option value="Нерчинск">
+                <option value="Сретенск">
+                <option value="Чита">
+                <option value="Шилка">
+                <option value="Иваново">
+                <option value="Кинешма">
+                <option value="Шуя">
+                <option value="Юрьевец">
+                <option value="Иркутск">
+                <option value="Братск">
+                <option value="Нальчик">
+                <option value="Калуга">
+                <option value="Малоярославец">
+                <option value="Петропавловск-Камчатский">
+                <option value="Усть-Камчатск">
+                <option value="Калевала">
+                <option value="Кемь">
+                <option value="Кондопога">
+                <option value="Петрозаводск">
+                <option value="Киров">
+                <option value="Сыктывкар">
+                <option value="Ухта">
+                <option value="Кострома">
+                <option value="Шарья">
+                <option value="Адлер">
+                <option value="Белореченск">
+                <option value="Красная поляна">
+                <option value="Краснодар">
+                <option value="Крымск">
+                <option value="Кущёвская">
+                <option value="Новороссийск">
+                <option value="Приморско-Ахтарск">
+                <option value="Тамань">
+                <option value="Тихорецк">
+                <option value="Туапсе">
+                <option value="Сочи">
+                <option value="Ачинск">
+                <option value="Енисейск">
+                <option value="Красноярск">
+                <option value="Минусинск">
+                <option value="Норильск">
+                <option value="Алушта">
+                <option value="Евпатория">
+                <option value="Керчь">
+                <option value="Севастополь">
+                <option value="Симферополь">
+                <option value="Судак">
+                <option value="Феодосия">
+                <option value="Ялта">
+                <option value="Каргаполье">
+                <option value="Курган">
+                <option value="Шадринск">
+                <option value="Курск">
+                <option value="Волхов">
+                <option value="Выборг">
+                <option value="Приморск">
+                <option value="Пушкин">
+                <option value="Санкт-Петербург">
+                <option value="Кирсанов">
+                <option value="Елец">
+                <option value="Липецк">
+                <option value="Йошкар-Ола">
+                <option value="Саранск">
+                <option value="Волоколамск">
+                <option value="Дмитров">
+                <option value="Кашира">
+                <option value="Клин">
+                <option value="Коломна">
+                <option value="Михнево">
+                <option value="Москва">
+                <option value="Нарофоминск">
+                <option value="Павловский Посад">
+                <option value="Починки">
+                <option value="Сергиев Посад">
+                <option value="Серпухов">
+                <option value="Апатиты">
+                <option value="Кандалакша">
+                <option value="Мончегорск">
+                <option value="Мурманск">
+                <option value="Хибины">
+                <option value="Ардатов">
+                <option value="Арзамас">
+                <option value="Кулебаки">
+                <option value="Лукоянов">
+                <option value="Нижний Новгород">
+                <option value="Новгород Великий">
+                <option value="Новосибирск">
+                <option value="Омск">
+                <option value="Оренбург">
+                <option value="Орёл">
+                <option value="Пенза">
+                <option value="Березники">
+                <option value="Пермь">
+                <option value="Соликамск">
+                <option value="Владивосток">
+                <option value="Великие Луки">
+                <option value="Псков">
+                <option value="Ейск">
+                <option value="Ростов-на-Дону">
+                <option value="Елатьма">
+                <option value="Касимов">
+                <option value="Рязань">
+                <option value="Ряжск">
+                <option value="Тума">
+                <option value="Самара">
+                <option value="Балашов">
+                <option value="Саратов">
+                <option value="Южно-Сахалинск">
+                <option value="Александровск-Сахалинский">
+                <option value="Екатеринбург">
+                <option value="Красноуфимск">
+                <option value="Владикавказ">
+                <option value="Вязьма">
+                <option value="Ельня">
+                <option value="Рославль">
+                <option value="Смоленск">
+                <option value="Ессентуки">
+                <option value="Железноводск">
+                <option value="Кисловодск">
+                <option value="Ново-Пятигорск">
+                <option value="Пятигорск">
+                <option value="Ставрополь">
+                <option value="Моршанск">
+                <option value="Тамбов">
+                <option value="Бугульма">
+                <option value="Елабуга">
+                <option value="Казань">
+                <option value="Мамадыш">
+                <option value="Ржев">
+                <option value="Осташков">
+                <option value="Тверь">
+                <option value="Торжок">
+                <option value="Тургиново">
+                <option value="Томск">
+                <option value="Ефремов">
+                <option value="Тула">
+                <option value="Викулово">
+                <option value="Салехард">
+                <option value="Сургут">
+                <option value="Тобольск">
+                <option value="Тюмень">
+                <option value="Болонь">
+                <option value="Комсомольск-на-Амуре">
+                <option value="Николаевск-на-Амуре">
+                <option value="Советская Гавань">
+                <option value="Троицкое">
+                <option value="Хабаровск">
+                <option value="Елабуга">
+                <option value="Магнитогорск">
+                <option value="Троицк">
+                <option value="Челябинск">
+                <option value="Чебоксары">
+                <option value="Анадырь">
+                <option value="Верхоянск">
+                <option value="Якутск">
+                <option value="Ростов Великий">
+                <option value="Рыбинск">
+                <option value="Углич">
+                <option value="Ярославль">
+
+
+
+            </datalist>
+
+            <p class=MsoNormal style='text-align:justify;text-indent:1.0cm;line-height:
+                    115%'><span style='font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif'>Суточные
+                    слои осадков Н<sub>р</sub>, мм, различной обеспеченности вычисляются по
+                    формуле, приведенной в справочном пособии<o:p></o:p></span></p>
+
+            <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;
+                    margin-bottom:12.0pt;margin-left:0cm;text-align:center;text-indent:1.0cm;
+                    line-height:115%'><span style='font-size:11.0pt;line-height:115%;font-family:
+                    "Arial",sans-serif'>Н<sub>р</sub> = Н<sub>ср</sub> (1 + c<sub>v</sub>* Ф), мм, <o:p></o:p></span>
+            </p>
+
+            <p class=MsoNormal style='text-indent:1.0cm;line-height:115%'><span
+                    style='font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif'>где Н<sub>р
+                    </sub>- максимальный суточный слой осадков требуемой обеспеченности, мм, Н<sub>р
+                        = </sub>h<sub>а;<o:p></o:p></sub></span></p>
+
+            <p class=MsoNormal style='text-indent:1.0cm;line-height:115%'><span
+                    style='font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif'>Н<sub>ср</sub>
+                    - значение среднего максимума суточного слоя осадков, равен <span class='innHcp'></span>мм,
+                    (приложение Н [1]);<o:p></o:p></span></p>
+
+            <p class=MsoNormal style='text-indent:1.0cm;line-height:115%'><span
+                    style='font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif'>Ф -
+                    нормированные отклонения от среднего значения при разных значениях обеспеченности
+                    р<sub>об</sub> ,%, и коэффициента асимметрии c<sub>s</sub>, по приложению Л </span><span lang=EN-US
+                    style='font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif;
+                    mso-ansi-language:EN-US'>[1]</span><span style='font-size:11.0pt;line-height:
+                    115%;font-family:"Arial",sans-serif'> равен <span class='innF'></span> (для обеспеченности
+                    р<sub>об</sub>
+                    =63% и c<sub>s</sub>=<span class='innCs'></span> (приложение Н [1]);<o:p></o:p></span></p>
+
+            <p class=MsoNormal style='text-indent:1.0cm;line-height:115%'><span
+                    style='font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif'>c<sub>v</sub>
+                    - коэффициент вариации суточных осадков, равен <span class='innCv'></span> (приложение Н
+                    [1]).</span></p>
+
+            <p class=MsoNormal style='text-indent:1.0cm;line-height:115%'><span
+                    style='font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif'>Параметры
+                    Н, Ф, c<sub>v</sub> и c<sub>s</sub> формулы (К.4) определяются по таблицам, приведённым
+                    в специальной литературе [7; 9; 10] или в Приложениях Л и М.<span style='mso-spacerun:yes'>  </span>
+                    <o:p></o:p>
+                </span></p>
+
+            <p class=MsoNormal style='margin-top:12.0pt;text-align:justify;line-height:
+                    115%'><b style='mso-bidi-font-weight:normal'><span style='font-size:11.0pt;
+                    line-height:115%;font-family:"Arial",sans-serif'>Таблица 1. Расчет </span></b><b
+                    style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:11.0pt;
+                    line-height:115%;font-family:"Arial",sans-serif;mso-ansi-language:EN-US'>h<sub>a</sub></span></b><b
+                    style='mso-bidi-font-weight:normal'><span style='font-size:11.0pt;line-height:
+                    115%;font-family:"Arial",sans-serif'>
+                        <o:p></o:p>
+                    </span></b></p>
+
+            <table class=MsoNormalTable cellspacing=0 cellpadding=0 style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+                    mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+                    .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+                <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:22.7pt'>
+                    <td width=82 style='width:82.6pt;border:solid windowtext 1.0pt;mso-border-alt:
+                    solid windowtext .5pt;background:#D9D9D9;padding:0cm 5.4pt 0cm 5.4pt;
+                    height:22.7pt'>
+
+                        <p style='text-align:center;line-height:115%;font-size:12.0pt;
+                    mso-bidi-font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif'><b>H<sub>cp</sub></b>
+                        </p>
+
+                    </td>
+
+                    <td width=76 style='width:82.6pt;border:solid windowtext 1.0pt;border-left:
+                    none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+                    background:#D9D9D9;padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+
+                        <p style='text-align:center;line-height:115%;font-size:12.0pt;
+                        mso-bidi-font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif'><b>C<sub>v</sub></b>
+                        </p>
+
+                    </td>
+                    <td width=76 style='width:82.6pt;border:solid windowtext 1.0pt;border-left:
+                    none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+                    background:#D9D9D9;padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+
+                        <p style='text-align:center;line-height:115%;font-size:12.0pt;
+                    mso-bidi-font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif'><b>C<sub>s</sub></b></p>
+
+                    </td>
+                    <td width=80 style='width:82.6pt;border:solid windowtext 1.0pt;border-left:
+                    none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+                    background:#D9D9D9;padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+
+                        <p style='text-align:center;line-height:115%;font-size:12.0pt;
+                    mso-bidi-font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif'><b>3C<sub>v</sub></b>
+                        </p>
+
+                    </td>
+                    <td width=77 style='width:82.6pt;border:solid windowtext 1.0pt;border-left:
+                    none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+                    background:#D9D9D9;padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+
+                        <p style='text-align:center;line-height:115%;font-size:12.0pt;
+                    mso-bidi-font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif'><b>Ф, %</b></p>
+
+                    </td>
+                    <td width=80 style='width:82.6pt;border:solid windowtext 1.0pt;border-left:
+                    none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+                    background:#D9D9D9;padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+
+                        <p style='text-align:center;line-height:115%;font-size:12.0pt;
+                    mso-bidi-font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif'><b>h<sub>a</sub> мм</b>
+                        </p>
+
+                    </td>
+                </tr>
+                <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+                    <td width=82 style='width:82.6pt;border:solid windowtext 1.0pt;border-top:
+                    none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+                    padding:0cm 5.4pt 0cm 5.4pt'>
+
+                        <p class=MsoNormal style='text-align:center;line-height:115%'><span class="innHcp"
+                                style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:115%'>1</span></p>
+
+                    </td>
+                    <td width=76 style='width:82.6pt;border-top:none;border-left:none;border-bottom:
+                    solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+                    solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+                    solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+
+                        <p class=MsoNormal style='text-align:center;line-height:115%'><span class="innCv"
+                                style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:115%'>2</span></p>
+
+                    </td>
+                    <td width=76 style='width:82.6pt;border-top:none;border-left:none;border-bottom:
+                    solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+                    solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+                    solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+
+                        <p class=MsoNormal style='text-align:center;line-height:115%'><span class="innCs"
+                                style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:115%'>3</span></p>
+
+                    </td>
+                    <td width=80 style='width:82.6pt;border-top:none;border-left:none;border-bottom:
+                    solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+                    solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+                    solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+
+                        <p class=MsoNormal style='text-align:center;line-height:115%'><span class="inn3Cv"
+                                style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:115%'>4</span></p>
+
+                    </td>
+                    <td width=77 style='width:82.6pt;border-top:none;border-left:none;border-bottom:
+                    solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+                    solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+                    solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+
+                        <p class=MsoNormal style='text-align:center;line-height:115%'><span class="innF"
+                                style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:115%'>5</span></p>
+
+                    </td>
+                    <td width=80 style='width:82.6pt;border-top:none;border-left:none;border-bottom:
+                    solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+                    solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+                    solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+
+                        <p class=MsoNormal style='text-align:center;line-height:115%'><span class="innHa"
+                                style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:115%'>6</span></p>
+
+                    </td>
+                </tr>
+            </table>
+
+            <p class=MsoNormal style='margin-top:12.0pt;text-indent:1.0cm;line-height:115%'><span
+                    style='font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif'>Так
+                    как коэффициент асимметрии кривой обеспеченности для<span style='mso-spacerun:yes'>  </span>г. <span
+                        class='innCity'><span style='mso-spacerun:yes'>  </span>c<sub>s</sub> &gt; 3c<sub>v</sub>, то
+                        для
+                        определения нормированного отклонения Ф от среднего значения ординат следует
+                        использовать логарифмически нормальную кривую обеспеченности.<span style='mso-spacerun:yes'> 
+                        </span>
+                        <o:p></o:p>
+                    </span></p>
+
+            <p class=MsoNormal style='text-indent:1.0cm;line-height:115%'><span
+                    style='font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif'>В
+                    результате по таблице Приложения Л или литературным источникам [7; 10] находим,
+                    что при значении коэффициента асимметрии c<sub>s</sub> = <span class='innCs'></span> и
+                    обеспеченности,
+                    р<sub>об</sub>=63%, нормированное отклонение ординат от среднего значения Ф
+                    составляет <span class='innF'></span> . Тогда, по формуле
+                    (К.4) расчётное значение суточного слоя осадков Н<sub>р</sub> обеспеченностью
+                    63% составит:<o:p></o:p></span></p>
+
+            <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;
+                    margin-bottom:12.0pt;margin-left:0cm;text-align:center;text-indent:1.0cm;
+                    line-height:115%'><span style='font-size:11.0pt;line-height:115%;font-family:
+                    "Arial",sans-serif'>Нр = <span class='innHcp'></span> • (1 + <span class='innCv'></span> • (<span
+                        class='innF'></span>)) = <span class='innHa'></span>
+
+
+
+                </span></p>
+
+            <p class=MsoNormal style='text-indent:1.0cm;line-height:115%'><span
+                    style='font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif'>Вывод:
+                    расчётное значение суточного слоя осадков Н<sub>р</sub> обеспеченностью 63% (P=1) для
+                    г. <span class='innCity'></span> составит <span class='innHa'></span> мм.<o:p></o:p></span></p>
+
+            </div>
+
+        </section>
+    </main>
+    <section class='button'>
+        <h2 class='visually-hidden'>Скачать документ</h2>
+        <div class="button__download">
+            <a class='word-export' href="javascript:void(0)">Скачать doc</a>
+        </div>
+    </section>
+
+    <footer id="myFooter">
+        <div class="container">
+            <!-- <ul>
+                    <li><a href="#">Company Information</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Terms of service</a></li>
+                </ul> -->
+            <!-- <p class="footer-copyright">© 2016 Copyright Text</p> -->
+        </div>
+        <div class="footer-social">
+            <a href="#" class="social-icons"><i class="fa fa-vk" aria-hidden="true"></i></a>
+            <a href="#" class="social-icons"><i class="fa fa-phone" aria-hidden="true"></i></a>
+            <a href="mailto:ampl_and@mail.ru" class="social-icons"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+    <script src="/js/dailylayer.js?v=11032020"></script>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/FileSaver.js"></script>
+    <script src="/js/jquery.wordexport.js"></script>
+    <script>
+        $('.word-export').click(function (events) {
+            $('.calcpump').wordExport();
+        });
+    </script>
+</body>
+
+</html>

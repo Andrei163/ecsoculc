@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+    <meta name='yandex-verification' content='50d52c682c2823bb' />
+    <title>Расчет инженерных систем</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&display=swap&subset=cyrillic"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.min.css?v=16042020">
+
+    <meta name="yandex-verification" content="dbcdde33149f8826" />
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(57096418, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/57096418" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
+</head>
+
+<body>
+
+    <header class='header'>
+        <nav class='navigation'>
+            <a href="" class="navigation__logo">
+                <img class='navigation__logo-image' src="/img/logo.png" alt="логотип" width="50">
+            </a>
+            <!-- <button type='button' class='navigation__toggle navigation__toggle-hidden'>Открыть меню</button> -->
+            <ul class='navigation__menu menu-list'>
+                <li class='menu-list__item'><a href='/index.html'>Главная</a></li>
+
+
+            </ul>
+
+        </nav>
+    </header>
+    <div id='blink7'>Для корректной работы всех функций <span class='alarm'>необходимо</span> использовать браузер <br><a class='banner' href="https://www.google.com/intl/ru/chrome/">Google Chrome</a></div>
+    <main class='main'>
+        <section class='calcpump'>
+            <h1 class="calcpump__title">Расчет производительности насосной станции для перекачки дождевого стока</h1>
+            <p class='calcpump__text'>
+                Схема перекачки не зарегулированного расхода дождевого стока,
+                принципиальная схема и расчётный гидрограф перекачки не
+                зарегулированного по сети расхода дождевого стока представлены на
+                рисунке 1.</p>
+            <img src="/img/application-g.jpg" alt="">
+            <p class='calcpump__text'>Максимальная производительность и рабочий объём насосной
+                станции для перекачки не зарегулированного дождевого стока определяются
+                по формулам:</p>
+            <p class="calcpump__text">Q<sub>нс</sub> = Q<sub>r</sub> •[(T<sub>кнс</sub> / t<sub>r</sub> )<sup>1–n</sup>
+                – (T<sub>кнс</sub> / t<sub>r</sub> – 1) <sup>1–n</sup>]</p>
+
+            <p class="calcpump__text">W<sub>нс</sub> = (0,06•Q<sub>r</sub> • t<sub>r</sub>)/(2 – n) • [(T<sub>кнс</sub>
+                / t<sub>r</sub>) <sup>2–n</sup> – (T<sub>ннс</sub> / t<sub>r</sub> )<sup>2–n</sup> – (T<sub>кнс</sub> /
+                t<sub>r</sub> – 1) <sup>2–n</sup> – Q<sub>нс</sub> / Q<sub>r</sub> • (2-n) •(T<sub>кнс</sub> /
+                t<sub>r</sub> – T<sub>ннс</sub> / t<sub>r</sub> )]</p>
+
+            <p class="calcpump__text">T<sub>ннс</sub> = t<sub>r</sub> •(Q<sub>НС</sub> / Q<sub>r</sub> )<sup> 1 /
+                    1-n</sup></p>
+            <p class="calcpump__text">Q<sub>нс</sub> – максимальная производительность насосной станции, <span
+                    class='innQns'></span> л/с;</p>
+            <p class="calcpump__text">W<sub>нс</sub> – рабочий объём резервуара насосной станции, <span
+                    class="table-result__text Wns"></span> м3;</p>
+            <p class="calcpump__text">Q<sub>r</sub> – максимальный расчётный расход дождевого стока в самотечном в
+                коллекторе на входе в насосную станцию, <span class='innQr'></span> л/с;</p>
+            <p class="calcpump__text">t<sub>r</sub> – расчётная продолжительность протекания дождевых вод по поверхности
+                и трубам до расчётного участка, <span class='inntr'></span> мин;</p>
+            <p class="calcpump__text">n – параметр, характеризующий интенсивность и продолжительность дождя для
+                конкретной местности <span class='innn'></span> ;</p>
+            <span class="calcpump__text">Т<sub>ннс</sub> – момент времени, при котором расход дождевого стока,
+                поступающего в насосную станцию, начинает превышать ее максимальную производительность, <span
+                    class='innTnns'> мин;</span></span>
+            <p class="calcpump__text">Т<sub>кнс</sub> – момент времени, при котором расход дождевого стока, поступающего
+                в насосную станцию, перестаёт превышать её максимальную производительность, <span
+                    class='innTkns'></span> мин.</p>
+
+
+            <h2 class='calcpump__title'>Расчет</h2>
+
+            <table class="calcpump__table table-value" style='border-collapse: collapse;'>
+                <caption style='font-weight: bold; text-transform: uppercase; text-align: center;'>Исходные данные
+                </caption>
+                <tr style='border:1px solid'>
+                    <td class='table-value__d1' style='border:1px solid'>
+                        <p class="table-value__text">Максимальный расчётный расход дождевого стока в самотечном в
+                            коллекторе на входе в насосную станцию</p>
+                    </td>
+                    <td class='table-value__d2' style='border:1px solid'>
+                        <span class='innQr'></span>
+                    </td>
+                    <td class='table-value__d3' style='border:1px solid'>
+                        <p class="table-value__text">л/с</p>
+                    </td>
+                </tr>
+                <tr style='border:1px solid'>
+                    <td class='table-value__d1' style='border:1px solid'>
+                        <p class="table-value__text">Расчётная продолжительность протекания дождевых вод по поверхности
+                            и трубам до расчётного участка</p>
+                    </td>
+                    <td class='table-value__d2' style='border:1px solid'>
+                        <span class='inntr'></span>
+                    </td>
+                    <td class='table-value__d3' style='border:1px solid'>
+                        <p class="table-value__text">мин</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class='table-value__d1' style='border:1px solid'>
+                        <p class="table-value__text">Параметр, характеризующий интенсивность и продолжительность дождя
+                            для конкретной местности</p>
+                    </td>
+                    <td class='table-value__d2' style='border:1px solid'>
+                        <span class='innn'></span>
+                    </td>
+                    <td class='table-value__d3' style='border:1px solid'>
+                        <p class="table-value__text">-</p>
+                    </td>
+                </tr>
+                <tr style='border:1px solid'>
+                    <td class='table-value__d1' style='border:1px solid'>
+                        <p class="table-value__text">Момент времени, при котором расход дождевого стока, поступающего в
+                            насосную станцию, перестаёт превышать её максимальную производительность</p>
+                    </td>
+                    <td class='table-value__d2' style='border:1px solid'>
+                        <span class='innTkns'></span>
+                    </td>
+                    <td class='table-value__d3' style='border:1px solid'>
+                        <p class="table-value__text">мин</p>
+                    </td>
+                </tr>
+            </table>
+
+            <p class="calcpump__formula">Q<sub>нс</sub> = <span class='innQr'>Q<sub>r</sub></span> •[(<span
+                    class='innTkns'>T<sub>кнс</sub></span> / <span class='inntr'>t<sub>r</sub></span> )<sup>1– <span
+                        class='innn'>n</span></sup> – (<span class='innTkns'>T<sub>кнс</sub></span> / <span
+                    class='inntr'>t<sub>r</sub></span> – 1) <sup>1–<span class='innn'>n</span></sup>]</p>
+
+            <p class="calcpump__formula">T<sub>ннс</sub> = <span class='inntr'>t<sub>r</sub></span> •(<span
+                    class='innQns'>Q<sub>нс</sub></span> / <span class='innQr'>Q<sub>r</sub></span> )<sup> 1 / 1-<span
+                        class='innn'>n</span></sup></p>
+
+            <p class="calcpump__formula">W<sub>нс</sub> = (0,06• <span class='innQr'>Q<sub>r</sub></span> • <span
+                    class='inntr'>t<sub>r</sub></span> )/(2 – <span class='innn'>n</span>) • [(<span
+                    class='innTkns'>T<sub>кнс</sub></span>/ <span class='inntr'>t<sub>r</sub></span> ) <sup> 2 – <span
+                        class='innn'>n</span></sup> – (<span class='innTnns'>T<sub>ннс</sub></span> / <span
+                    class='inntr'>t<sub>r</sub></span> )<sup>2–<span class='innn'>n</span></sup> – (<span
+                    class='innTkns'> <span class='innTnns'>T<sub>кнс</sub></span> </span> / <span
+                    class='inntr'>t<sub>r</sub></span> – 1) <sup> 2– <span class='innn'>n</span> </sup> – <span
+                    class='innQns'>Q<sub>нс</sub></span> / <span class='innQr'>Q<sub>r</sub></span> • (2-<span
+                    class='innn'>n</span>) •(<span class='innTkns'>T<sub>кнс</sub></span> / <span
+                    class='inntr'>t<sub>r</sub></span> – <span class='innTnns'>T<sub>ннс</sub></span> / <span
+                    class='inntr'>t<sub>r</sub></span> )]</p>
+
+
+
+            <table class="calcpump__table table-result" style='border-collapse: collapse;'>
+                <caption style='font-weight: bold; text-transform: uppercase; text-align: center;'>Результат вычислений
+                </caption>
+                <tr style='border:1px solid'>
+                    <td class='table-result__d1' style='border:1px solid'>
+                        <p class="table-result__text">Максимальная производительность насосной станции</p>
+                    </td>
+                    <td class='table-result__d2' style='border:1px solid'>
+                        <p class="table-result__text">Q<sub>нс</sub></p>
+                    </td>
+                    <td class='table-result__d3' style='border:1px solid'>
+                        <p class="table-result__text Qns"></p>
+                    </td>
+                    <td class='table-result__d4' style='border:1px solid'>
+                        <p class="table-result__text">л/с</p>
+                    </td>
+                </tr>
+                <tr style='border:1px solid; border-collapse: collapse;'>
+                    <td class='table-result__d1' style='border:1px solid'>
+                        <p class="table-result__text">Рабочий объём резервуара насосной станции,</p>
+                    </td>
+                    <td class='table-result__d2' style='border:1px solid'>
+                        <p class="table-result__text">W<sub>нс</sub></p>
+                    </td>
+                    <td class='table-result__d3' style='border:1px solid'>
+                        <p class="table-result__text"><span class="table-result__text innWns"></span></p>
+                    </td>
+                    <td class='table-result__d4' style='border:1px solid'>
+                        <p class="table-result__text">м<sup>3</sup></p>
+                    </td>
+                </tr>
+                <tr style='border:1px solid; border-collapse: collapse;'>
+                    <td class='table-result__d1' style='border:1px solid'>
+                        <p class="table-result__text">Момент времени, при котором расход дождевого стока, поступающего в
+                            насосную станцию, начинает превышать ее максимальную производительность</p>
+                    </td>
+                    <td class='table-result__d2' style='border:1px solid'>
+                        <p class="calcpump__text">T<sub>ннс</sub></p>
+                    </td>
+                    <td class='table-result__d3' style='border:1px solid'>
+                        <p class="table-result__text Tnns"></p>
+                    </td>
+                    <td class='table-result__d4' style='border:1px solid'>
+                        <p class="table-result__text">мин</p>
+                    </td>
+                </tr>
+
+
+            </table>
+
+        </section>
+    </main>
+
+    <div class='calcinput'>
+        <h3 class="calcinput__title">Введите данные для расчета</h3>
+        <div class="calcinput__wrapper">
+            <input class="calcpump__number qr" id='qr' type='number'>
+            <div class="calcpump__label-box">
+                <label class='calcpump__label'>Q<sub>r</sub></label>
+            </div>
+
+            <input class="calcpump__number tr" type='number'>
+            <div class="calcpump__label-box">
+                <label class='calcpump__label'>t<sub>r</sub></label>
+            </div>
+
+            <input class="calcpump__number n" type='number' step="0.01">
+            <div class="calcpump__label-box">
+                <label class='calcpump__label'>n</label>
+            </div>
+
+            <input class="calcpump__number Tkns" type='number'>
+            <div class="calcpump__label-box">
+                <label class='calcpump__label'>T<sub>кнс</sub></label>
+            </div>
+        </div>
+    </div>
+
+
+    <section class='button'>
+        <h2 class='visually-hidden'>Скачать документ</h2>
+        <div class="button__download">
+            <a class='word-export' href="javascript:void(0)">Скачать doc</a>
+        </div>
+    </section>
+
+    <footer id="myFooter">
+        <div class="container">
+            <!-- <ul>
+                <li><a href="#">Company Information</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Terms of service</a></li>
+            </ul> -->
+            <!-- <p class="footer-copyright">© 2016 Copyright Text</p> -->
+        </div>
+        <div class="footer-social">
+            <a href="#" class="social-icons"><i class="fa fa-vk" aria-hidden="true"></i></a>
+            <a href="#" class="social-icons"><i class="fa fa-phone" aria-hidden="true"></i></a>
+            <a href="mailto:ampl_and@mail.ru" class="social-icons"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        </div>
+    </footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/FileSaver.js"></script>
+    <script src="/js/jquery.wordexport.js"></script>
+    <script>
+        $('.word-export').click(function (events) {
+            $('.main').wordExport();
+        });
+    </script>
+
+
+    <script src='/js/script.js?v=03032020'></script>
+</body>
+
+</html>
